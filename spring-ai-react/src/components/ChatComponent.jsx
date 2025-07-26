@@ -2,12 +2,12 @@ import React,{useState} from "react";
 
 function ChatComponent(){
     const [prompt,setPrompt] = useState('');
-    const [chatResponse,setResponse]=useState([]);
+    const [chatResponse,setResponse]=useState('');
 
     const askAI = async () => {
         try {
             const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`)
-            const data = response.text;
+            const data = await response.text();
             setResponse(data);
         } catch (error) {
             console.error("Error Generating chat",error)

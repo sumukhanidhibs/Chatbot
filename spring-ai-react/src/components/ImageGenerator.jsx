@@ -7,7 +7,7 @@ function ImageGenerator(){
     const generateImage = async () => {
             try {
                 const response = await fetch(`http://localhost:8080/generate-image?prompt=${prompt}`)
-                const urls = response.json();
+                const urls = await response.json();
                 setImageUrl(urls);
             } catch (error) {
                 console.error("Error Generating image",error)
