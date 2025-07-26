@@ -24,8 +24,8 @@ public class ImageService {
                                 .withModel("dall-e-2")
                                 .withQuality(quality)
                                 .withN(Integer.valueOf(n))
-                                .withHeight(Integer.valueOf(width))
-                                .withWidth(Integer.valueOf(height)).build())
+                                .withHeight(Integer.valueOf(height))
+                                .withWidth(Integer.valueOf(width)).build())
         );
 
         return imageResponse;
